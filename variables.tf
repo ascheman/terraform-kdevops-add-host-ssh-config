@@ -69,3 +69,10 @@ variable "backup_postfix" {
   default     = "kdevops_module"
   description = "The postfix to use for the backup file for your ssh config"
 }
+
+variable "local_exec_trigger" {
+  description = "A value to trigger re-execution of local-exec provisioner"
+  type        = string
+  # Change the value when calling the module to re-execute
+  default = "no-reexecution"
+}

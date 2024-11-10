@@ -31,5 +31,10 @@ resource "null_resource" "ssh_config_add" {
       var.ssh_config
     )
     working_dir = path.module
+
+  }
+
+  triggers = {
+    always_run = var.local_exec_trigger
   }
 }
